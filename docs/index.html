@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VAETKI Technical Report</title>
+
+  <!--
+    Publish this file and VAETKI_Technical_Report.pdf together, either at the
+    root of your Pages branch or in its /docs folder. Select that branch and
+    folder under Settings > Pages > Deploy from a branch.
+
+    Citation metadata follows the supplied version 1.0.0 BibTeX (year 2025).
+    The attached PDF cover is dated January 2026; that date is shown separately.
+    If the official citation year is corrected, update citation_publication_date,
+    the visible citation year, and BibTeX year together.
+    Group authorship follows the cover and official citation. Individual credits
+    are transcribed from page 2 without replacing the credited group author.
+  -->
+  <link rel="canonical" href="https://cyr0930.github.io/VAETKI/">
+  <meta name="citation_title" content="VAETKI Technical Report">
+  <meta name="citation_author" content="NC-AI Consortium">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_technical_report_institution" content="NC-AI Consortium">
+  <meta name="citation_pdf_url" content="https://cyr0930.github.io/VAETKI/VAETKI_Technical_Report.pdf">
+  <meta name="description" content="VAETKI Technical Report by NC-AI Consortium: abstract, full report, author credits, and recommended citation.">
+
+  <style>
+    :root { color-scheme: light; font-family: Georgia, "Times New Roman", serif; color: #182536; background: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; border-top: 5px solid #184c83; }
+    main { max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+    h1 { font-size: clamp(1.9rem, 5vw, 2.5rem); line-height: 1.15; margin: 0 0 1rem; }
+    .authors { font-size: 1.125rem; line-height: 1.6; margin: 0 0 .4rem; }
+    .date { color: #4d5b69; margin: 0; font-size: 1rem; }
+    nav { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin: 1.25rem 0 1.75rem; font: 1rem/1.5 system-ui, sans-serif; }
+    a { color: #164f8a; text-underline-offset: .2em; }
+    a:hover { color: #092d55; }
+    a:focus-visible { outline: 3px solid #236aa8; outline-offset: 5px; }
+    h2 { font-size: 1.3rem; margin: 0 0 .75rem; }
+    .abstract { font-size: 1.0625rem; line-height: 1.7; margin: 0; }
+    p, a { overflow-wrap: anywhere; }
+    section + section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #dce2e8; }
+    h3 { font-size: 1.0625rem; line-height: 1.5; margin: 1.25rem 0 .5rem; }
+    dl { margin: 0; font-size: 1rem; line-height: 1.65; }
+    dt { font-weight: bold; margin-top: .6rem; }
+    dd { margin: 0; }
+    pre { background: #f4f6f8; padding: 1rem; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .875rem; line-height: 1.6; }
+    .citation { font-size: 1rem; line-height: 1.6; }
+    @media (max-width: 480px) { main { padding: 1.75rem 1.125rem 2rem; } }
+    @media print { body { border: 0; } main { padding: 0; max-width: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <article aria-labelledby="report-title">
+      <header>
+        <h1 id="report-title">VAETKI Technical Report</h1>
+        <p class="authors">NC-AI Consortium</p>
+        <p class="date">Technical report · Citation year: 2025 · PDF dated January 2026</p>
+        <nav aria-label="Report resources">
+          <a href="./VAETKI_Technical_Report.pdf">Read the report (PDF)</a>
+          <a href="https://github.com/wbl-ncai/VAETKI">Original repository</a>
+        </nav>
+      </header>
+      <section aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <p class="abstract">This report introduces VAETKI, a series of large language models developed at 100B, 20B, and 7B scales to secure national data sovereignty and promote industrial AI Transformation (AX). The models utilize a decoder-only Mixture-of-Experts (MoE) architecture, integrating Multi-Latent Attention (MLA) with Local-Global Interleaving. This configuration achieves an 83% reduction in KV cache size and a 40% gain in training efficiency compared to conventional MLA. Our pre-training corpus involves a curated 5-trillion-token subset selected through a seven-stage refinement pipeline from a total of 20 trillion tokens. We further implemented a three-stage post-training pipeline—consisting of Reasoning-centric SFT, High-Quality SFT, and DPO—trained on 8 million instruction-tuning triplets. This effort was complemented by 17.6 billion tokens of specialized datasets for multilingual, cultural, and reasoning domains. Evaluation results on VAETKI-100B-A10B show significant performance on Korean benchmarks like CLIcK and KoBALT, alongside robust instruction-following capabilities as measured by IFEval. The results demonstrate that the VAETKI series provides a specialized foundation for high-performance AI applications optimized for the Korean context.</p>
+      </section>
+      <section aria-labelledby="authors-heading">
+        <h2 id="authors-heading">Authors</h2>
+        <h3>Principal Investigators (Project Leads)</h3>
+        <dl>
+          <dt>NC-AI</dt>
+          <dd>Yeonsoo Lee</dd>
+          <dt>ETRI</dt>
+          <dd>Oh-woog Kwon</dd>
+          <dt>Korea University</dt>
+          <dd>Heuiseok Lim</dd>
+        </dl>
+        <h3>Core Developers (Lead Contributors)</h3>
+        <dl>
+          <dt>NC-AI</dt>
+          <dd>Young-rok Cha</dd>
+          <dt>ETRI</dt>
+          <dd>Jong-hun Shin</dd>
+          <dt>Korea University</dt>
+          <dd>Jungseob Lee</dd>
+        </dl>
+        <h3>Contributors</h3>
+        <dl>
+          <dt>NC-AI</dt>
+          <dd>Ayoung Moon, Bohui Kim, Geonsoo Kim, Hyonsu Choe, Hyowon Wi, Hyungjong Noh, Jeongbeom Jeong, Jeongho Ju, Jonghyeon Lee, Junsoo Park, Kyungsoo Kim, Meiying Ren, Minkyoung Jung, Saebyeok Lee, Seungjin Lee, SunYoung Park, Younghyun Yu</dd>
+          <dt>ETRI</dt>
+          <dd>Hongjin Kim, Hwa Jeon Song, Ilchae Jung, In Jun Park, Jeong Heo, Jeonguk Bang, Jihee Ryu, Jin Seong, Junyong Park, Kiyoung Lee, Kiyoung Park, Minkyu Lee, Ran Han, Sanghun Jeon, SangHun Kim, Sanghyun Cho, Soojin Jang, Soojong Lim, Yong-Ju Lee, Yoonhyung Kim, Young-Kil Kim, Youngwan Lee</dd>
+          <dt>Korea University</dt>
+          <dd>Chanhee Park, Dahyun Jung, Dongjun Kim, Gyuho Shim, Hyeonseok Moon, Jaehyung Seo, Jungsun Jang, Junyoung Son, Minhyuk Kim, Seongtae Hong, Seungyoon Lee, Suhyune Son, Yongchan Chun, Youngjoon Jang</dd>
+        </dl>
+      </section>
+      <section aria-labelledby="citation-heading">
+        <h2 id="citation-heading">Citation</h2>
+        <p class="citation">NC-AI Consortium. 2025. <cite>VAETKI Technical Report</cite>. Version 1.0.0.</p>
+        <pre><code>@misc{ncai2025vaetkitechnicalreport,
+  title        = {VAETKI Technical Report},
+  author       = {{NC-AI Consortium}},
+  year         = {2025},
+  howpublished = {\url{https://github.com/wbl-ncai/VAETKI/raw/releases/v1.0.0/VAETKI_Technical_Report.pdf}},
+  note         = {Version 1.0.0}
+}</code></pre>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
